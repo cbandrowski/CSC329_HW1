@@ -1,8 +1,8 @@
 package org.example.csc329_hw1;
 
 public class Player {
-    String name;
-    int score;
+    private String name;
+    private int score;
 
     /**
      * Default constructor
@@ -30,7 +30,7 @@ public class Player {
      * @param other
      */
     public Player(Player other) {
-        this.name = other.name;
+        this.name = new String(other.name);
         this.score = other.score;
     }
 
@@ -75,6 +75,7 @@ public class Player {
      * this calls the player copy constructor and will create a copy
      */
     public Player createClone() {
+        //This will call forward the Copy Constructor to be used and copy the original player
         return new Player(this);
     }
     /**

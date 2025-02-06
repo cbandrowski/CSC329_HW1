@@ -28,6 +28,16 @@ public class PQList<Player> implements PlayerADT<Player>{
 
 }
 
+public PQList createClone(){
+        PQList clone = new PQList(); //Makes Empty PQlist
+        Node temp = this.head; //Makes temp the head of Original PQlist
+        while(temp != null){ //This will go until tail.next if reached which will be null
+            clone.add(new Player(temp.pl))
+        }
+
+        return clone;
+}
+
     @Override
     public void add(Player a) {
         Node temp = new Node(a);

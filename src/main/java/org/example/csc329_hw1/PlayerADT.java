@@ -1,6 +1,6 @@
 package org.example.csc329_hw1;
 
-public interface PlayerADT <Player>{
+public interface PlayerADT {
     //Adds a player object to the priority queue
     void add(Player a);
 

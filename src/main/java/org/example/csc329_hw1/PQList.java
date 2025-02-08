@@ -1,6 +1,7 @@
 package org.example.csc329_hw1;
+import org.example.csc329_hw1.Player;
 
-public class PQList<Player> implements PlayerADT<Player>{
+public class PQList implements PlayerADT{
 
  private org.example.csc329_hw1.Node head;
  private org.example.csc329_hw1.Node tail;
@@ -32,7 +33,8 @@ public PQList createClone(){
         PQList clone = new PQList(); //Makes Empty PQlist
         Node temp = this.head; //Makes temp the head of Original PQlist
         while(temp != null){ //This will go until tail.next if reached which will be null
-            clone.add(new Player(temp.pl))
+            clone.add(new Player(temp.getPlayer().createClone()));
+            temp = temp.getNext();
         }
 
         return clone;
@@ -41,7 +43,6 @@ public PQList createClone(){
     @Override
     public void add(Player a) {
         Node temp = new Node(a);
-
         //If linkedlist is Empty then it will make head and tail the new temp node
         if(isEmpty()){
         head = tail = temp;
@@ -61,8 +62,7 @@ public PQList createClone(){
 
     @Override
     public void clear() {
-        head = null;
-        tail = null;
+        head = tail = null;
         size = 0;
 
     }

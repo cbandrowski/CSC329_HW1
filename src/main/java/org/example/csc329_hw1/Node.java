@@ -1,8 +1,8 @@
 package org.example.csc329_hw1;
 
-public class Node <Player>{
+public class Node {
     private Player player;
-    private Node<Player> next;
+    private Node next;
 
     /**
      * Default Constructor
@@ -18,7 +18,7 @@ public class Node <Player>{
      * @param newPlayer
      * @param newNext
      */
-    public Node(Player newPlayer, Node<Player> newNext) {
+    public Node(Player newPlayer, Node newNext) {
         this.player = newPlayer;
         this.next = newNext;
     }
@@ -31,7 +31,7 @@ public class Node <Player>{
     public Node getNext() {
         return next;
     }
-    public void setNext(Node<Player> next) {
+    public void setNext(Node next) {
         this.next = next;
     }
 

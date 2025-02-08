@@ -73,6 +73,7 @@ public class Player {
     /**
      * createClone
      * this calls the player copy constructor and will create a copy
+     * Player ex2 = ex1.createClone()
      */
     public Player createClone() {
         //This will call forward the Copy Constructor to be used and copy the original player
@@ -82,12 +83,17 @@ public class Player {
      * Equals
      * compares names of players
      */
-    public boolean playerEquals(Player other){
-        if(this.name.equals(other.name)){
-            return true;
-        }
-        else{
-            return false;
-        }
+
+    public boolean playerEquals(Player other) {
+        return this.name.equals(other.name);
     }
+
+    /**
+     *toString
+     *
+     */
+    public String toString() {
+        return "Name: " + name + " Score: " + score;
+    }
+
 }

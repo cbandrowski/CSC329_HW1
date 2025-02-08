@@ -85,15 +85,16 @@ public class PQList implements PlayerADT {
             return null;
         }
         Node highest = this.head;//Make head highest since it is start
-        Node prev = null; //keep track of prev node during traversal
         Node current = this.head;//This will traverse list
         Node highPrev = null;//previous node of highest
+        Node prev = null; //keep track of prev node during traversal
+
 
         while (current != null) {
 
             if (current.getPlayer().getScore() > highest.getPlayer().getScore()) {
                 highest = current;//Set the new highest node
-                highPrev = current;//Keeping track of prev node before highest
+                highPrev = prev;//Keeping track of prev node before highest
             }
             prev = current; //move prev forward
             current = current.getNext();//move current forward
@@ -101,12 +102,14 @@ public class PQList implements PlayerADT {
         //if highest is head move head forward to next node which will remove it
         if(highest == this.head) {
             head = head.getNext();
+
         } else if (highest == tail) {//if highest is tail it will set tail to previous node
             tail = highPrev;
             tail.setNext(null);
         }else {//if not tail or h
         highPrev.setNext(highest.getNext());
         }
+
         size--;
         return highest.getPlayer();
 

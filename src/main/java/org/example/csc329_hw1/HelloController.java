@@ -55,12 +55,19 @@ public class HelloController {
         uploadedList.getItems().clear();
         String[] playerList = pqList.toString().split("\n");
         uploadedList.getItems().addAll(playerList);
-        sizeLabel.setText(Integer.toString(uploadedList.getItems().size()));
+        sizeLabel.setText(String.valueOf(pqList.getSize()));
     }
 
     public void removeHighest(ActionEvent actionEvent) {
        Player highest = pqList.getHighestScoreplayer();
        removedList.getItems().add(highest.toString());
        updateListView();
+    }
+
+    public void clearList(ActionEvent actionEvent) {
+        pqList.clear();
+        updateListView();
+        removedList.getItems().clear();
+        sizeLabel.setText("0");
     }
 }

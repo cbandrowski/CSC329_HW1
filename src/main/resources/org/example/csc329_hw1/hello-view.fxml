@@ -14,7 +14,7 @@
    <ListView fx:id="uploadedList" prefHeight="538.0" prefWidth="526.0" />
    <ListView fx:id="removedList" prefHeight="200.0" prefWidth="250.0" />
    <Button mnemonicParsing="false" onAction="#removeHighest" text="Remove" />
-   <Button mnemonicParsing="false" text="Button" />
+   <Button mnemonicParsing="false" text="Clear" onAction="#clearList" />
     <Button onAction="#uploadFile" text="Upload File" />
 
 </VBox>

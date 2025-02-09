@@ -8,13 +8,33 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
+    <HBox alignment="CENTER_LEFT" spacing="20.0">
     <Label fx:id="welcomeText" text="List Size" />
     <Label fx:id="sizeLabel" text="" />
-   <ListView fx:id="uploadedList" prefHeight="538.0" prefWidth="526.0" />
-   <ListView fx:id="removedList" prefHeight="200.0" prefWidth="250.0" />
-   <Button mnemonicParsing="false" onAction="#removeHighest" text="Remove" />
-   <Button mnemonicParsing="false" text="Clear" onAction="#clearList" />
-    <Button onAction="#uploadFile" text="Upload File" />
+    <Region HBox.hgrow="ALWAYS" />
+    <Label fx:id="copyListSizeText" text="Copy List Size" />
+    <Label fx:id="copyListSizeLabel" text="" />
+</HBox>
+    <!-- Main Section: UploadedList & CopyList Side by Side -->
+    <HBox alignment="CENTER" spacing="20.0">
+        <ListView fx:id="uploadedList" prefHeight="538.0" prefWidth="300.0" />
+        <ListView fx:id="copyList" prefHeight="538.0" prefWidth="300.0" />
+    </HBox>
+   <ListView prefHeight="71.0" prefWidth="960.0" />
+   <TextField prefHeight="25.0" prefWidth="458.0" />
+
+    <!-- Removed List Below -->
+    <ListView fx:id="removedList" prefHeight="66.0" prefWidth="960.0" />
+
+    <!-- Buttons Section -->
+    <HBox alignment="CENTER" spacing="20.0">
+        <Button onAction="#uploadFile" text="Upload File" />
+        <Button mnemonicParsing="false" onAction="#removeHighest" text="Remove" />
+        <Button mnemonicParsing="false" onAction="#clearList" text="Clear" />
+      <Button mnemonicParsing="false" text="Copy " onAction="#copyConstructor" />
+      <Button mnemonicParsing="false" text="Clone" onAction="#cloneMethod" />
+      <Button mnemonicParsing="false" text="Compare" onAction="#compareNames" />
+      <Button mnemonicParsing="false" text="Clear Copy" onAction="#clearCopyList" />
+    </HBox>
 
 </VBox>

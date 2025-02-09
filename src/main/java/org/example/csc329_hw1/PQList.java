@@ -31,6 +31,12 @@ public class PQList implements PlayerADT {
         this.tail = other.tail;
         this.size = other.size;
 
+        Node temp = other.head;
+        while (temp != null) {
+            this.add(new Player(temp.getPlayer().createClone()));
+            temp = temp.getNext();
+        }
+
     }
 
     /**

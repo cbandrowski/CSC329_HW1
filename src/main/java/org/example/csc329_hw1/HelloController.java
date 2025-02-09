@@ -16,6 +16,8 @@ public class HelloController {
     public ListView<String> uploadedList;
     public ListView removedList;
     public Label sizeLabel;
+    public ListView copyList;
+    public Label copyListSizeLabel;
     private PQList pqList = new PQList();
     @FXML
     private Label welcomeText;
@@ -69,5 +71,17 @@ public class HelloController {
         updateListView();
         removedList.getItems().clear();
         sizeLabel.setText("0");
+    }
+
+    public void copyConstructor(ActionEvent actionEvent) {
+    }
+
+    public void cloneMethod(ActionEvent actionEvent) {
+    }
+
+    public void compareNames(ActionEvent actionEvent) {
+    }
+
+    public void clearCopyList(ActionEvent actionEvent) {
     }
 }

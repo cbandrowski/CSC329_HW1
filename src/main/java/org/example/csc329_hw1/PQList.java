@@ -27,9 +27,9 @@ public class PQList implements PlayerADT {
      * @param other
      */
     public PQList(PQList other) {
-        this.head = other.head;
-        this.tail = other.tail;
-        this.size = other.size;
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
 
         Node temp = other.head;
         while (temp != null) {

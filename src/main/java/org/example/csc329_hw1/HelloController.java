@@ -74,9 +74,19 @@ public class HelloController {
     }
 
     public void copyConstructor(ActionEvent actionEvent) {
+        PQList copyPqlist = new PQList(pqList);
+        copyList.getItems().clear();
+        String[] playerList = copyPqlist.toString().split("\n");
+        copyList.getItems().addAll(playerList);
+        copyListSizeLabel.setText(String.valueOf(copyPqlist.getSize()));
     }
 
     public void cloneMethod(ActionEvent actionEvent) {
+        PQList clonePqlist = pqList.createClone();
+        copyList.getItems().clear();
+        String[] playerList = clonePqlist.toString().split("\n");
+        copyList.getItems().addAll(playerList);
+        copyListSizeLabel.setText(String.valueOf(clonePqlist.getSize()));
     }
 
     public void compareNames(ActionEvent actionEvent) {

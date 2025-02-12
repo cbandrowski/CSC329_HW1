@@ -1,15 +1,15 @@
-Here's a **README** for your project:  
+ 
 
 ---
 
-# **Priority Queue Linked List (`PQList`) - CSC329 Homework 1**
+# Priority Queue Linked List (`PQList`) - CSC329 Homework 1
 
-## ** Overview**
+## Overview
 This project implements a **priority queue using a linked list** (`PQList`). It stores **Player** objects in a linked structure, ensuring that elements can be added, cloned, and managed efficiently.
 
 ---
 
-## ** Project Structure**
+## Project Structure
 ```
 org.example.csc329_hw1/
 │── Player.java       # Represents a player with a name and score
@@ -21,7 +21,7 @@ org.example.csc329_hw1/
 
 ---
 
-## ** Features**
+## Features
 **Custom Linked List** → Implements a priority queue without using Java collections.  
 **Player Class** → Encapsulates player details (`name`, `score`) and supports cloning.  
 **Deep Copy Support** → `PQList` and `Player` support **deep copying** through a `createClone()` method.  
@@ -30,13 +30,13 @@ org.example.csc329_hw1/
 
 ---
 
-## **Class Details**
-### **Player.java**
+## Class Details
+### Player.java
 Defines a **player object** with the following attributes:
 - `String name` → Player's name.
 - `int score` → Player's score.
 
-### **Methods:**
+### Methods:
 | Method | Description |
 |--------|------------|
 | `Player()` | Default constructor (name = `""`, score = `0`) |
@@ -52,12 +52,12 @@ Defines a **player object** with the following attributes:
 
 ---
 
-### ** Node.java**
+### Node.java
 Represents a **single node** in the linked list, storing:
 - `Player player` → Holds a player object.
 - `Node next` → Pointer to the **next node**.
 
-### ** Methods:**
+###  Methods:
 | Method | Description |
 |--------|------------|
 | `Node(Player player)` | Constructor (creates a node for a given player) |
@@ -69,7 +69,7 @@ Represents a **single node** in the linked list, storing:
 
 ---
 
-### **PQList.java**
+### PQList.java
 Implements the **priority queue** using a **linked list**.
 
 #### ** Attributes**
@@ -77,7 +77,7 @@ Implements the **priority queue** using a **linked list**.
 - `Node tail` → Points to the **last node** in the queue.
 - `int size` → Stores the number of players in the queue.
 
-#### **Methods:**
+#### Methods:
 | Method | Description |
 |--------|------------|
 | `PQList()` | **Default constructor** (initializes an empty queue) |
@@ -90,34 +90,7 @@ Implements the **priority queue** using a **linked list**.
 | `PQList<Player> createClone()` | Returns a **deep copy** of the queue |
 
 ---
-
-## **How to Use**
-### ** Create a Player**
-```java
-Player p1 = new Player("Alice", 100);
-Player p2 = new Player("Bob", 200);
-```
-
-### ** Add Players to PQList**
-```java
-PQList<Player> playerQueue = new PQList<>();
-playerQueue.add(p1);
-playerQueue.add(p2);
-```
-
-### **Clone the Priority Queue**
-```java
-PQList<Player> clonedQueue = playerQueue.createClone();
-```
-
-### **Get the Highest Scoring Player**
-```java
-Player highest = playerQueue.getHighestScorePlayer();
-System.out.println("Highest Scorer: " + highest.getName());
-```
-
----
-## ** Author**
+## Author
  **Developed for CSC329 - Homework 1**  
  **Author:** *Cody Bandrowski* 
 

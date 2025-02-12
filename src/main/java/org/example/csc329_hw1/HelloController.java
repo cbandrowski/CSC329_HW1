@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -18,11 +19,17 @@ public class HelloController {
     public Label sizeLabel;
     public ListView copyList;
     public Label copyListSizeLabel;
+    public TextField searchName;
+    public ListView foundList;
     private PQList pqList = new PQList();
     @FXML
     private Label welcomeText;
 
-
+    /**
+     * uploadFile
+     *
+     * @param actionEvent
+     */
     public void uploadFile(javafx.event.ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select a file to upload");
@@ -90,8 +97,16 @@ public class HelloController {
     }
 
     public void compareNames(ActionEvent actionEvent) {
+       Player compare = pqList.searchByName(searchName.getText());
+        if(compare == null){
+             foundList.getItems().add(new Player(searchName.getText() +"Not Found", 0));
+        }
+        else{
+            foundList.getItems().add(compare.toString());
+        }
     }
 
     public void clearCopyList(ActionEvent actionEvent) {
+        copyList.getItems().clear();
     }
 }

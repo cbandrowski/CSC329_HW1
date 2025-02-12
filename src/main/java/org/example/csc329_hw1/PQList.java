@@ -120,6 +120,20 @@ public class PQList implements PlayerADT {
         return highest.getPlayer();
 
     }
+    public Player searchByName(String name) {
+        if (isEmpty()) {
+            return null;
+        }
+        Node current = this.head;
+        Node found = null;
+        while (current != null) {
+            if (current.getPlayer().getName().equals(name)) {
+                return current.getPlayer();
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
 
     /**
      * clear

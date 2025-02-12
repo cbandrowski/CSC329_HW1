@@ -20,8 +20,8 @@
         <ListView fx:id="uploadedList" prefHeight="538.0" prefWidth="300.0" />
         <ListView fx:id="copyList" prefHeight="538.0" prefWidth="300.0" />
     </HBox>
-   <ListView prefHeight="71.0" prefWidth="960.0" />
-   <TextField prefHeight="25.0" prefWidth="458.0" />
+   <ListView prefHeight="71.0" prefWidth="960.0" fx:id="foundList"/>
+   <TextField prefHeight="25.0" prefWidth="458.0" fx:id="searchName" />
 
     <!-- Removed List Below -->
     <ListView fx:id="removedList" prefHeight="66.0" prefWidth="960.0" />

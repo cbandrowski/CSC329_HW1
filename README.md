@@ -19,17 +19,6 @@ org.example.csc329_hw1/
 │── Main.java         # (Optional) Test class to demonstrate functionality
 ```
 
----
-
-## Features
-**Custom Linked List** → Implements a priority queue without using Java collections.  
-**Player Class** → Encapsulates player details (`name`, `score`) and supports cloning.  
-**Deep Copy Support** → `PQList` and `Player` support **deep copying** through a `createClone()` method.  
-**Efficient O(1) Insertions** → New nodes are added at the end in **constant time**.  
-**Priority Queue Operations** → Methods to **add, clone, and manage** players dynamically.  
-
----
-
 ## Class Details
 ### Player.java
 Defines a **player object** with the following attributes:

@@ -1,5 +1,11 @@
 package org.example.csc329_hw1;
 
+/**
+ * Node class
+ * Created Node class for use of Player Nodes
+ * @author Cody Bandrowski
+ */
+
 public class Node {
     private Player player;
     private Node next;

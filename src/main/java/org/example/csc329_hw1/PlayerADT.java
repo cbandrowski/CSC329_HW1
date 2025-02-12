@@ -1,5 +1,10 @@
 package org.example.csc329_hw1;
 
+/**
+ * PLayerADT
+ * Interface for PQList
+ */
+
 public interface PlayerADT {
     //Adds a player object to the priority queue
     void add(Player a);

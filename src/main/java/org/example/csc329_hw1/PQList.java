@@ -120,6 +120,13 @@ public class PQList implements PlayerADT {
         return highest.getPlayer();
 
     }
+
+    /**
+     * searchByName
+     * This method using equal from Player class and takes in a string of player name to find it
+     * @param name
+     * @return
+     */
     public Player searchByName(String name) {
         if (isEmpty()) {
             return null;

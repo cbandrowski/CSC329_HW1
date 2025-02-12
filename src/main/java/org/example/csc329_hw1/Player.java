@@ -1,5 +1,11 @@
 package org.example.csc329_hw1;
 
+/**
+ * Player class
+ * Sets the Player class used for the objects
+ * @author Cody Bandrowski
+ */
+
 public class Player {
     private String name;
     private int score;
